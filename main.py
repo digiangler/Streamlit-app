@@ -8,12 +8,11 @@ from PIL import ImageDraw
 st.title("顔認識アプリ")
 
 # jsonファイルから読み込み用
-# with open("secret.json") as f:
-#   secret_json = json.loads(f)
+with open("secret.json") as f:
+  secret_json = json.load(f)
 
-# subscription_key = secret_json["SUBSCRIPTION_KEY"]
+subscription_key = secret_json["SUBSCRIPTION_KEY"]
 
-subscription_key = "93b48cd269e0477db7d867f0bb316f3a"
 assert subscription_key
 
 face_api_url = "https://20210104digiangler.cognitiveservices.azure.com/face/v1.0/detect"
